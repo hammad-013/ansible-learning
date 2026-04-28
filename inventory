@@ -1,1 +1,2 @@
+[web_servers]
 ansible@172.16.55.131 apache_package=apache2
