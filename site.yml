@@ -16,3 +16,13 @@
     package:
       name: "{{ apache_package }}"
       state: latest
+
+- hosts: file_servers
+  become: true
+  tasks:
+
+  - name: install samba on centos
+    dnf:
+      name: samba
+      state: latest
+    when: ansible_distribution == "CentOS"
