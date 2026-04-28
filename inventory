@@ -1,1 +1,1 @@
-ansible@172.16.55.131
+ansible@172.16.55.131 apache_package=apache2

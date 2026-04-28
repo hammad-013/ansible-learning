@@ -1,7 +1,8 @@
 ansible all -m ping
 ansible all list-hosts
-ansible all -m gather_facts
+ansible all -m gather_facts --limit <ip> ===> can limit, which machine to run for
 ansible all -m apt -a update_cache=true --become --ask-become-pass =====> sudo apt update
 ansible all -m apt -a name=<pkg-name> --become --ask-become-pass   =====> sudo apt install <pkg-name>
 ansible all -m apt -a "name=<pkg-name> state=latest" --become --ask-become-pass ======> update the package
 ansible all -m apt -a upgrade=dist --become --ask-become-pass ====> update all packages
+ansible-playbook --ask-become-pass <playbook>.yml
