@@ -13,9 +13,10 @@
   tasks:
 
   - name: install apache package
-    package:
-      name: "{{ apache_package }}"
+    apt:
+      name: apache2
       state: latest
+    when: ansible_distribution == "Ubuntu"
 
 - hosts: file_servers
   become: true
