@@ -1,14 +1,5 @@
 ---
 
-- hosts: all
-  become: true
-  pre_tasks:
-
-  - name: update repo index
-    tags: always
-    package:
-      update_cache: yes
-
 - hosts: workstations
   become: true
   tasks:
