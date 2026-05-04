@@ -6,3 +6,4 @@ ansible all -m apt -a name=<pkg-name> --become --ask-become-pass   =====> sudo a
 ansible all -m apt -a "name=<pkg-name> state=latest" --become --ask-become-pass ======> update the package
 ansible all -m apt -a upgrade=dist --become --ask-become-pass ====> update all packages
 ansible-playbook --ask-become-pass <playbook>.yml
+ansible-playbook --list-tags <playbook>
