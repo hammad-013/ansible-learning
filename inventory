@@ -1,7 +1,7 @@
 [file_servers]
-ansible@172.16.55.133
+172.16.55.133
 [web_servers]
-ansible@172.16.55.131
-ansible@172.16.55.133
+172.16.55.131
+172.16.55.133
 [workstations]
-ansible@172.16.55.131
+172.16.55.131

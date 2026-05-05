@@ -1,0 +1,26 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+    - name: create robot user
+      tags: always
+      user:
+        name: elliot
+        groups: root
+
+    - name: add ssh key for elliot
+      tags: always
+      authorized_key:
+        user: elliot
+        key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHMsJNIoii6tTWlC+97i7fZF3asV6cCYLR5RTiBGYxCw default"
+  
+    - name: add sudoers file for elliot
+      tags: always
+      copy:
+        src: sudoer_elliot
+        dest: /etc/sudoers.d/elliot
+        owner: root
+        group: root
+        mode: 0440
+                
