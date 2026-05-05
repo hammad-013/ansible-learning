@@ -1,0 +1,4 @@
+- name: add ssh key for elliot
+  authorized_key:
+    user: elliot
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHMsJNIoii6tTWlC+97i7fZF3asV6cCYLR5RTiBGYxCw default"

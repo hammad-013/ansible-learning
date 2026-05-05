@@ -1,0 +1,6 @@
+- name: install samba on centos
+  tags: samba
+  dnf:
+    name: samba
+    state: latest
+  when: ansible_distribution == "CentOS"
